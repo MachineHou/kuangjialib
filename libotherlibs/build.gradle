@@ -1,0 +1,85 @@
+apply from: "${rootDir.path}/gradle/base.gradle"
+apply from: "${rootDir.path}/gradle/publish.gradle"
+def librarys = rootProject.ext.dependencies //
+dependencies {
+    // https://github.com/square/leakcanary 不支持android 12 隐私协议 exported false
+//    api librarys.leakcanaryAndroid
+    // https://github.com/jd-alexander/LikeButton
+//    api 'com.mikepenz:iconics-core:2.9.1@aar'
+//    api 'com.mikepenz:community-material-typeface:1.8.36.1@aar'
+    //
+//    api 'com.larswerkman:lobsterpicker:1.0.1'
+    // https://github.com/dongjunkun/DropDownMenu
+//    api 'com.github.dongjunkun:DropDownMenu:1.0.4'
+    // https://github.com/jgilfelt/SystemBarTint
+//    api 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    // https://github.com/koral--/android-gif-drawable
+//    api 'pl.droidsonroids.gif:android-gif-drawable:1.2.22'
+    // https://github.com/yhaolpz/FloatWindow
+//    api 'com.github.yhaolpz:FloatWindow:1.0.9'
+    // https://github.com/dfqin/PermissionGrantor
+//    api 'com.github.dfqin:grantor:2.5'
+    // For developers using AndroidX in their applications
+//    api 'pub.devrel:easypermissions:3.0.0'
+    // For developers using the Android Support Library
+    // https://github.com/zhihu/Matisse
+//    api("com.zhihu.android:matisse:0.5.3-beta3") {
+//        exclude group: 'com.github.bumptech.glide'
+//    }
+    // https://github.com/zzhoujay/RichText/
+//    api 'com.zzhoujay.richtext:richtext:3.0.7'
+    // https://github.com/maning0303/MNProgressHUD
+//    api 'com.github.maning0303:MNProgressHUD:V1.1.8X'
+    api project(':libutils')
+    api 'com.kunminx.linkage:linkage-recyclerview:2.4.0'
+
+    api 'joda-time:joda-time:2.10.2'
+
+    api 'androidx.camera:camera-core:1.0.2'
+    api 'androidx.camera:camera-camera2:1.0.2'
+    api 'io.github.lucksiege:pictureselector:v2.7.3-rc08'
+
+    api 'com.github.li-xiaojun:StateLayout:1.2.3'
+    api 'com.github.li-xiaojun:EasyAdapter:1.2.4'
+
+
+    api 'com.orhanobut:logger:2.2.0'
+    api 'com.gitee.li_yu_jiang.AndroidPicker:Common:3.1.0'
+    api 'com.gitee.li_yu_jiang.AndroidPicker:WheelView:3.1.0'
+    api 'com.gitee.li_yu_jiang.AndroidPicker:WheelPicker:3.1.0'
+    api 'com.gitee.li_yu_jiang.AndroidPicker:AddressPicker:3.1.0'
+    api 'com.gitee.li_yu_jiang.AndroidPicker:ColorPicker:3.1.0'
+    api 'com.gitee.li_yu_jiang.AndroidPicker:FilePicker:3.1.0'
+    api 'com.gitee.li_yu_jiang.AndroidPicker:CalendarPicker:3.1.0'
+    api 'com.gitee.li_yu_jiang.AndroidPicker:ImagePicker:3.1.0'
+
+
+    //3D地图so及jar
+    api 'com.amap.api:3dmap:latest.integration'
+    //定位功能
+    api 'com.amap.api:location:latest.integration'
+    //搜索功能
+    api 'com.amap.api:search:latest.integration'
+
+
+    // https://github.com/drakeet/MultiType
+    api 'me.drakeet.multitype:multitype:3.4.4'
+    // https://github.com/jaredrummler/MaterialSpinner
+    api 'com.jaredrummler:material-spinner:1.2.5'
+    // https://github.com/BolexLiu/PressScanCode
+    api 'com.github.BolexLiu:PressScanCode:v1.0.0'
+    // https://github.com/yshrsmz/KeyboardVisibilityEvent
+    api 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.3.0'
+    // https://github.com/meetsl/SCardView-master
+    api 'io.github.meetsl:SCardView:1.2'
+    // https://github.com/nanchen2251/BankCardUtils
+    api 'com.github.nanchen2251:BankCardUtils:1.0.2'
+    // https://github.com/SherlockGougou/BigImageViewPager
+    api 'com.github.SherlockGougou:BigImageViewPager:androidx-6.1.6'
+    // https://github.com/MZCretin/ExpandableTextView
+    api 'com.github.MZCretin:ExpandableTextView:v1.6.1-x'
+    // https://github.com/princekin-f/EasyFloat
+    api 'com.github.princekin-f:EasyFloat:2.0.3'
+
+
+}

@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+def librarys = rootProject.ext.dependencies //
+android {
+
+    packagingOptions {
+        pickFirst 'lib/armeabi/libRSSupport.so'
+        pickFirst 'lib/armeabi/librsjni_androidx.so'
+        pickFirst 'lib/armeabi/librsjni.so'
+        pickFirst 'lib/armeabi-v7a/libRSSupport.so'
+        pickFirst 'lib/armeabi-v7a/librsjni_androidx.so'
+        pickFirst 'lib/armeabi-v7a/librsjni.so'
+        pickFirst 'lib/arm64-v8a/librsjni.so'
+        pickFirst 'lib/arm64-v8a/libRSSupport.so'
+        pickFirst 'lib/arm64-v8a/librsjni_androidx.so'
+        pickFirst 'lib/x86_64/libRSSupport.so'
+        pickFirst 'lib/x86_64/librsjni_androidx.so'
+        pickFirst 'lib/x86_64/librsjni.so'
+        pickFirst 'lib/x86/librsjni_androidx.so'
+        pickFirst 'lib/x86/libRSSupport.so'
+        pickFirst 'lib/x86/librsjni.so'
+
+    }
+
+    compileSdkVersion 32
+
+    defaultConfig {
+        applicationId "com.geek.app"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+        renderscriptTargetApi 19
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':libgeek')
+//    implementation 'com.github.GeekCodesTeam.geeklibs:libgeek:3.5.7'
+
+}
+
+//apply from: './MobSDK.gradle'

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_namelibupdateapp" translatable="false">app_namelibupdateapp</string>
+    <string name="cancel" translatable="false">取消</string>
+    <string name="sure" translatable="false">确认</string>
+
+    <string name="app_xbbyzbh" translatable="false">版本更新</string>
+    <string name="app_lkaz" translatable="false">去升级</string>
+
+</resources>

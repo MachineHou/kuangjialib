@@ -1,0 +1,13 @@
+apply from: "${rootDir.path}/gradle/base.gradle"
+apply from: "${rootDir.path}/gradle/publish.gradle"
+def librarys = rootProject.ext.dependencies //
+dependencies {
+    api project(':libutils')
+    // glide47
+    annotationProcessor librarys.annotationProcessorglide47compiler
+    api 'com.caverock:androidsvg:1.2.1'
+    //解决Glide找不到Android声明库问题
+//    annotationProcessor 'androidx.annotation:annotation:1.2.0'
+//    implementation 'com.github.getActivity:XXPermissions:11.0'
+
+}

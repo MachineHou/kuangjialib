@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geek.libbase">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+<!--        android:label="@string/app_namelibbase"-->
+
+        <!--        pluginbufen-->
+        <activity android:name=".plugins.proxy.ProxyActivity" />
+        <service android:name=".plugins.proxy.ProxyService" />
+        <receiver android:name=".plugins.proxy.ProxyBroadcastReceiver" />
+
+        <activity
+            android:name=".baserecycleview.yewu1.ActViewPageYewuList1"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.ActViewPageYewuList1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".baserecycleview.yewu2.ActYewuList1"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.ActYewuList1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".viewpager2.LunboMainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.LunboMainActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".viewpager2.ui.GalleryActivity" />
+        <activity android:name=".viewpager2.ui.TouTiaoActivity" />
+        <activity android:name=".viewpager2.ui.TVActivity" />
+        <activity android:name=".viewpager2.ui.RecyclerViewBannerActivity" />
+        <activity android:name=".viewpager2.ui.ConstraintLayoutBannerActivity" />
+        <activity
+            android:name=".viewpager2.ui.Vp2FragmentRecyclerviewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".fragmentsgeek.demo1.MkDemo1Activity" />
+        <activity android:name=".fragmentsgeek.demo2.MkDemo2Activity" />
+        <!--demo2 config start-->
+        <meta-data
+            android:name="DEMO2_CONFIG"
+            android:value="${DEMO2_CONFIG_VALUE}" />
+        <meta-data
+            android:name="STATISTICS"
+            android:value="${STATISTICS_VALUE}" />
+        <!--demo2 config end-->
+
+        <!--demo3 config start-->
+        <activity android:name=".fragmentsgeek.demo3.MkDemo3Activity" />
+        <meta-data
+            android:name="DEMO3_CONFIG"
+            android:value="${DEMO3_CONFIG_VALUE}" />
+        <!--demo3 config end-->
+
+        <!--demo4 config start-->
+        <activity android:name=".fragmentsgeek.demo4.MkDemo4Activity" />
+        <meta-data
+            android:name="DEMO4_CONFIG"
+            android:value="${DEMO4_CONFIG_VALUE}" />
+        <!--demo4 config end-->
+        <activity android:name=".fragmentsgeek.demo5.MkDemo5Activity" />
+        <activity
+            android:name=".fragmentsgeek.NkMainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.NkMainActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".plugin.ProxyActivity" />
+        <activity
+            android:name=".recycleviewcard2.StackAct"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.StackAct" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.StackAct"
+                    android:scheme="dataability" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.StackAct"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.StackAct"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".recycleviewcard2.StackActVertical"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.StackActVertical" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".recycleviewcard1.RCardAct1"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.RCardAct1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.RCardAct1"
+                    android:scheme="dataability" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.RCardAct1"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.RCardAct1"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".splshact.SplshActDemo"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.SplshActDemo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fenlei.FenleiAct"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.FenleiAct" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fenlei.fenlei1.FenleiAct1"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.FenleiAct1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

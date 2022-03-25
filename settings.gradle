@@ -1,0 +1,56 @@
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+////        jcenter() // Warning: this repository is going to shut down soon
+//
+//    }
+//}
+rootProject.name = "geeklibs"
+include ':app'
+// start aar
+include ':libsCenter', ':biz-libs'
+// end aar
+
+// start aar
+include ':libsCenterNew',
+        ':libsCenterNew:alipaysdk',
+        ':libsCenterNew:hooklistenerlib2',
+        ':libsCenterNew:libmvpaar',
+        ':libsCenterNew:libretrofitaar',
+        ':libsCenterNew:opendroid2'
+// end aar
+
+// commonlibs
+include ':libagentweb20'
+include ':libmvp'
+include ':libotherlibs'
+include ':libbase'
+include ':libutils'
+include ':libretrofit'
+include ':libglide47'
+include ':libwebview'
+include ':libswipebacklayout'
+include ':librararyforfileprovdider'
+include ':libzxing'
+include ':liblanguage'
+include ':libxuanzeqi'
+include ':zdkplayer:dkplayer-java'
+include ':zdkplayer:dkplayer-players:ijkexo'
+include ':zdkplayer:dkplayer'
+include ':zdkplayer:dkplayer-ui'
+include ':zdkplayer:dkplayer-videocache'
+include ':libyanzheng'
+include ':libxpopup'
+include ':libupdateapp'
+include ':libncalendar'
+include ':libpictureselector'
+include ':liblinkagerecyclerview'
+include ':libexpandablerecyclerview'
+include ':libtablayout'
+include ':libgeek'
+include ':libcitypicker'
+include ':liblocations'
+include ':libopendroid'
+include ':libocr'
